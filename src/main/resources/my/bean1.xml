@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="people" class="com.weikun.B.People">
+
+        <property name="name">
+            <value>Mike</value>
+         </property>
+
+        <property name="sex">
+            <value>男</value>
+        </property>
+
+        <property name="age">
+            <value>100</value>
+        </property>
+        <property name="address">
+            <value>哈理工</value>
+        </property>
+    </bean>
+
+
+    <bean id="people2" class="com.weikun.B.People">
+
+        <constructor-arg type="java.lang.String">
+             <value>rose</value>
+        </constructor-arg>
+
+        <constructor-arg type="java.lang.String">
+            <value>F</value>
+        </constructor-arg>
+
+    </bean>
+    <bean id="people4" class="com.weikun.B.People">
+
+        <constructor-arg index="0">
+            <value>alice</value>
+        </constructor-arg>
+
+        <constructor-arg index="1">
+            <value>M</value>
+        </constructor-arg>
+
+        <constructor-arg index="2">
+            <value>56</value>
+        </constructor-arg>
+
+        <constructor-arg index="3">
+            <value>哈工大</value>
+        </constructor-arg>
+
+        <constructor-arg index="4">
+           <ref bean="office"/>
+        </constructor-arg>
+
+    </bean>
+    <bean id="office" class="com.weikun.B.Office">
+        <property name="old" value="100"/>
+
+
+    </bean>
+
+    <bean id="people3" class="com.weikun.B.People">
+
+        <constructor-arg index="0">
+            <value>rose</value>
+        </constructor-arg>
+
+        <constructor-arg index="1">
+            <value>F</value>
+        </constructor-arg>
+
+        <constructor-arg index="2">
+            <value>77</value>
+        </constructor-arg>
+
+    </bean>
+
+
+
+
+
+</beans>
